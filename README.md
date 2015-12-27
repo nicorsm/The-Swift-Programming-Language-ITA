@@ -1,4 +1,4 @@
-# The-Swift-Programming-Language-ITA
+# The Swift Programming Language - Swift 2.2 Italian Edition
 
 Italian edition of "The Swift Programming Language - Swift 2.2 Edition", released from Apple under Creative Commons Attribution 4.0 International.
 
@@ -8,8 +8,8 @@ For more info please visit: [Swift.org - Documentation](https://swift.org/docume
 
 
 ###Edition Swift 2.2
-- About Swift - Introduzione a Swift (nicorsm)
-- A Swift Tour - Una panoramica su Swift (nicorsm)
+- About Swift - Introduzione a Swift ([nicorsm](http://github.com/nicorsm))
+- A Swift Tour - Una panoramica su Swift ([nicorsm](http://github.com/nicorsm))
 - The Basics
 - Basic Operators
 - Strings and Characters
@@ -57,4 +57,4 @@ $ zip -rg filename.epub OEBPS -x \*.DS_Store
 
 ##Contributors
 
-- Nicola Giancecchi, (nicorsm), nicorsm *at* me *dot* com.
+- Nicola Giancecchi, [nicorsm](http://github.com/nicorsm), nicorsm *at* me *dot* com.
