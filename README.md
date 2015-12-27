@@ -7,7 +7,7 @@ For more info please visit: [Swift.org - Documentation](https://swift.org/docume
 ##Chapters
 
 
-###Edition Swift 2.2
+###Swift 2.2 Edition
 - About Swift - Introduzione a Swift ([nicorsm](http://github.com/nicorsm))
 - A Swift Tour - Una panoramica su Swift ([nicorsm](http://github.com/nicorsm))
 - The Basics
