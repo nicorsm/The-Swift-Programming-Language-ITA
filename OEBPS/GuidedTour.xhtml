@@ -10,10 +10,10 @@
       <div id="chapter_container" class='conceptualwithtasks'>
   <article class="chapter">
     <a id="TP40016643-CH2">&#x200c;</a><a id="TP40016643-CH2-ID1">&#x200c;</a>
-    <h2 class="chapter-name">A Swift Tour</h2>
+    <h2 class="chapter-name">Una panoramica su Swift</h2>
       
       	<section class="section">
-      		<p class="para">Tradition suggests that the first program in a new language should print the words “Hello, world!” on the screen. In Swift, this can be done in a single line:</p><section class="code-listing">
+      		<p class="para">La tradizione suggerisce che il primo programma scritto in un nuovo linguaggio debba stampare a schermo le parole "Hello, world!" (<i>Ciao, mondo!</i>). In Swift, questo può essere fatto in una sola riga di codice:</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -23,15 +23,18 @@
       </div>
   </div>
 </section>
-<p class="para">If you have written code in C or Objective-C, this syntax looks familiar to you—in Swift, this line of code is a complete program. You don’t need to import a separate library for functionality like input/output or string handling. Code written at global scope is used as the entry point for the program, so you don’t need a <code class="code-voice">main()</code> function. You also don’t need to write semicolons at the end of every statement.</p><p class="para">This tour gives you enough information to start writing code in Swift by showing you how to accomplish a variety of programming tasks. Don’t worry if you don’t understand something—everything introduced in this tour is explained in detail in the rest of this book.</p>
+<p class="para">Se hai già scritto codice in C o Objective-C, questa sintassi dovrebbe sembrarti familiare-in Swift, questa riga di codice è un programma completo. Non hai bisogno di importare una libreria separata per funzionalità come input/output o gestione delle stringhe, per esempio. Il codice scritto in ambito globale è utilizzato come punto d'ingresso per il programma, in modo da non avere bisogno della funzione <code class="code-voice">main()</code>. Inoltre, non è necessario scrivere il punto e virgola alla fine di ogni istruzione.</p>
+<p class="para">Questa panoramica ti fornisce abbastanza informazioni per iniziare a scrivere codice in Swift mostrandoti come risolvere qualche esempio di brevi algoritmi.
+Non preoccuparti se non capisci qualcosa: tutto ciò che viene introdotto in questa panoramica è spiegato in dettaglio nei prossimi capitoli.</p>
+<!-- You also don’t need to write semicolons at the end of every statement.</p><p class="para">This tour gives you enough information to start writing code in Swift by showing you how to accomplish a variety of programming tasks. Don’t worry if you don’t understand something—everything introduced in this tour is explained in detail in the rest of this book.</p>-->
     		</section> 
 
         <section class="section">
           <div class="note playground">
             <aside class="aside">
-              <p class="aside-title uppercase">Note</p>
+              <p class="aside-title uppercase">Nota</p>
               <p class="para"></p>
-              <p class="para">On a Mac, download the Playground and double-click the file to open it in Xcode: <a href="https://developer.apple.com/go/?id=swift-tour">https://developer.apple.com/go/?id=swift-tour</a></p>
+              <p class="para">Utilizzando un Mac, scarica il Playground e fai doppio click sul file per aprirlo in Xcode: <a href="https://developer.apple.com/go/?id=swift-tour">https://developer.apple.com/go/?id=swift-tour</a></p>
 
             </aside>
           </div>
@@ -39,8 +42,8 @@
 
       <section class="section">
 	<a id="TP40016643-CH2-ID461">&#x200c;</a>
-  <h3 class="section-name">Simple Values</h3>
-  <p class="para">Use <code class="code-voice">let</code> to make a constant and <code class="code-voice">var</code> to make a variable. The value of a constant doesn’t need to be known at compile time, but you must assign it a value exactly once. This means you can use constants to name a value that you determine once but use in many places.</p><section class="code-listing">
+  <h3 class="section-name">Valori semplici</h3>
+  <p class="para">Si può utilizzare <code class="code-voice">let</code> per dichiarare una costante e <code class="code-voice">var</code> per dichiarare una variabile. Il valore di una costante non ha bisogno di essere conosciuto in fase di compilazione, ma è necessario assegnargli un valore esattamente una volta. Ciò significa che è possibile utilizzare le costanti per dare un nome ad un valore che dichiari una volta ma che puoi usare in diversi luoghi.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -51,7 +54,7 @@
         </ol>
       </div>
   </div>
-</section><p class="para">A constant or variable must have the same type as the value you want to assign to it. However, you don’t always have to write the type explicitly. Providing a value when you create a constant or variable lets the compiler infer its type. In the example above, the compiler infers that <code class="code-voice">myVariable</code> is an integer because its initial value is an integer.</p><p class="para">If the initial value doesn’t provide enough information (or if there is no initial value), specify the type by writing it after the variable, separated by a colon.</p><section class="code-listing">
+</section><p class="para">Una costante o una variabile devono avere lo stesso tipo del valore che gli si vuole assegnare. Tuttavia, non è necessario specificare il tipo esplicitamente. Fornendo un valore alla creazione di una costante o di una variabile permette al compilatore di dedurre il suo tipo. Nel prossimo esempio, il compilatore deduce che <code class="code-voice">myVariable</code> è un'intero perchè il suo valore iniziale specificato è un numero intero.</p><p class="para">Se il valore iniziale non fornisce informazioni sufficienti (o se non viene specificato un valore iniziale), specificare il tipo scrivendolo dopo il nome della variabile, separato da due punti.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -64,12 +67,12 @@
   </div>
 </section><div class="note">
   <aside class="aside">
-    	<p class="aside-title uppercase">Experiment</p>
-    	<p class="para">Create a constant with an explicit type of <code class="code-voice">Float</code> and a value of <code class="code-voice">4</code>.
+    	<p class="aside-title uppercase">Prova!</p>
+    	<p class="para">Creare una costante impostando come tipo esplicito <code class="code-voice">Float</code> e come valore <code class="code-voice">4</code>.
     	</p>
     
   </aside>
-</div><p class="para">Values are never implicitly converted to another type. If you need to convert a value to a different type, explicitly make an instance of the desired type.</p><section class="code-listing">
+</div><p class="para">I valori non sono mai convertiti implicitamente in un altro tipo. Se avete bisogno di convertire un valore in un tipo diverso, create esplicitamente un'istanza del tipo desiderato.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -82,12 +85,12 @@
   </div>
 </section><div class="note">
   <aside class="aside">
-    	<p class="aside-title uppercase">Experiment</p>
-    	<p class="para">Try removing the conversion to <code class="code-voice">String</code> from the last line. What error do you get?
+    	<p class="aside-title uppercase">Prova!</p>
+    	<p class="para">Provare a rimuovere la conversione a <code class="code-voice">String</code> dall'ultima riga. Quale errore viene visualizzato? 
     	</p>
     
   </aside>
-</div><p class="para">There’s an even simpler way to include values in strings: Write the value in parentheses, and write a backslash (<code class="code-voice">\</code>) before the parentheses. For example:</p><section class="code-listing">
+</div><p class="para">C'è un modo ancora più semplice per includere i valori nelle stringhe, scrivendo il loro valore in parentesi e inserendo un backslash (<code class="code-voice">\</code>) prima di esse. Per esempio:</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -101,12 +104,12 @@
   </div>
 </section><div class="note">
   <aside class="aside">
-    	<p class="aside-title uppercase">Experiment</p>
-    	<p class="para">Use <code class="code-voice">\()</code> to include a floating-point calculation in a string and to include someone’s name in a greeting.
+    	<p class="aside-title uppercase">Prova!</p>
+    	<p class="para">Utilizzate <code class="code-voice">\()</code> per includere un calcolo in virgola mobile in una stringa e includendo il nome di qualcuno in un saluto.
     	</p>
     
   </aside>
-</div><p class="para">Create arrays and dictionaries using brackets (<code class="code-voice">[]</code>), and access their elements by writing the index or key in brackets. A comma is allowed after the last element.</p><section class="code-listing">
+</div><p class="para">Creare gli array e i dizionari utilizzando le parentesi quadre (<code class="code-voice">[]</code>), e accedendo ai loro elementi scrivendo l'indice o la chiave all'interno delle parentesi quadre. È consentito inserire una virgola dopo l'ultimo elemento.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -122,7 +125,7 @@
         </ol>
       </div>
   </div>
-</section><p class="para">To create an empty array or dictionary, use the initializer syntax.</p><section class="code-listing">
+</section><p class="para">Per creare un array o un dizionario vuoto, utilizzare la sintassi di inizializzazione.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -132,7 +135,7 @@
         </ol>
       </div>
   </div>
-</section><p class="para">If type information can be inferred, you can write an empty array as <code class="code-voice">[]</code> and an empty dictionary as <code class="code-voice">[:]</code>—for example, when you set a new value for a variable or pass an argument to a function.</p><section class="code-listing">
+</section><p class="para">Se le informazioni sul tipo possono essere dedotte, è possibile scrivere un array vuoto come  <code class="code-voice">[]</code> e un dizionario vuoto come <code class="code-voice">[:]</code>—ad esempio, quando si associa un nuovo valore ad una variabile o si passa un argomento ad una funzione.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -147,8 +150,8 @@
 </section>
 <section class="section">
 	<a id="TP40016643-CH2-ID462">&#x200c;</a>
-  <h3 class="section-name">Control Flow</h3>
-  <p class="para">Use <code class="code-voice">if</code> and <code class="code-voice">switch</code> to make conditionals, and use <code class="code-voice">for</code>-<code class="code-voice">in</code>, <code class="code-voice">for</code>, <code class="code-voice">while</code>, and <code class="code-voice">repeat</code>-<code class="code-voice">while</code> to make loops. Parentheses around the condition or loop variable are optional. Braces around the body are required.</p><section class="code-listing">
+  <h3 class="section-name">Flusso di controllo</h3>
+  <p class="para">Utilizzare <code class="code-voice">if</code> e <code class="code-voice">switch</code> per creare condizioni, e utilizzare  <code class="code-voice">for</code>-<code class="code-voice">in</code>, <code class="code-voice">for</code>, <code class="code-voice">while</code>, e <code class="code-voice">repeat</code>-<code class="code-voice">while</code> per creare cicli. Le parentesi attorno alle condizioni o ai cicli sono opzionali. Le parentesi graffe attorno al corpo della condizione o del ciclo sono richieste.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -166,7 +169,7 @@
         </ol>
       </div>
   </div>
-</section><p class="para">In an <code class="code-voice">if</code> statement, the conditional must be a Boolean expression—this means that code such as <code class="code-voice">if score { ... }</code> is an error, not an implicit comparison to zero.</p><p class="para">You can use <code class="code-voice">if</code> and <code class="code-voice">let</code> together to work with values that might be missing. These values are represented as optionals. An optional value either contains a value or contains <code class="code-voice">nil</code> to indicate that a value is missing. Write a question mark (<code class="code-voice">?</code>) after the type of a value to mark the value as optional.</p><section class="code-listing">
+</section><p class="para">In un <code class="code-voice">if</code>, la condizione deve essere una espressione booleana-ciò significa che un codice come <code class="code-voice">if score { ... }</code> provoca un errore, e non viene considerato come un confronto implicito con zero.</p><p class="para">È possibile utilizzare <code class="code-voice">if</code> e <code class="code-voice">let</code> assieme per lavorare con valori che potrebbero mancare. Tali valori sono rappresentati come opzionali. Un valore opzionale contiene un valore o contiene <code class="code-voice">nil</code> per indicare che il valore è mancante. Scrivere un punto interrogativo (<code class="code-voice">?</code>) dopo il tipo di un valore per renderlo opzionale.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -184,12 +187,12 @@
   </div>
 </section><div class="note">
   <aside class="aside">
-    	<p class="aside-title uppercase">Experiment</p>
-    	<p class="para">Change <code class="code-voice">optionalName</code> to <code class="code-voice">nil</code>. What greeting do you get? Add an <code class="code-voice">else</code> clause that sets a different greeting if <code class="code-voice">optionalName</code> is <code class="code-voice">nil</code>.
+    	<p class="aside-title uppercase">Prova!</p>
+    	<p class="para">Cambiare <code class="code-voice">optionalName</code> a <code class="code-voice">nil</code>. Quale saluto viene visualizzato? Aggiungere una clausola  <code class="code-voice">else</code> che imposta un saluto diverso se <code class="code-voice">optionalName</code> è <code class="code-voice">nil</code>.
     	</p>
     
   </aside>
-</div><p class="para">If the optional value is <code class="code-voice">nil</code>, the conditional is <code class="code-voice">false</code> and the code in braces is skipped. Otherwise, the optional value is unwrapped and assigned to the constant after <code class="code-voice">let</code>, which makes the unwrapped value available inside the block of code.</p><p class="para">Another way to handle optional values is to provide a default value using the <code class="code-voice">??</code> operator. If the optional value is missing, the default value is used instead.</p><section class="code-listing">
+</div><p class="para">Se il valore opzionale è <code class="code-voice">nil</code>, la condizione è <code class="code-voice">false</code> e il codice nelle parentesi graffe viene saltato. In caso contrario, il valore opzionale viene scartato ed assegnato alla costante dopo <code class="code-voice">let</code>, la quale rende il valore scartato disponibile all'interno del blocco di codice.</p><p class="para">Un'altra via per gestire i valori opzionali è fornire un valore di default utilizzando l'operatore <code class="code-voice">??</code>. Se il valore opzionale non è presente, viene utilizzato al suo posto il valore di default.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -200,7 +203,7 @@
         </ol>
       </div>
   </div>
-</section><p class="para">Switches support any kind of data and a wide variety of comparison operations—they aren’t limited to integers and tests for equality.</p><section class="code-listing">
+</section><p class="para">Gli switch supportano ogni tipo di dati e una grande varietà di operazioni di confronto-essi non sono limitati ai numeri interi o a controlli di uguaglianza.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -221,12 +224,12 @@
   </div>
 </section><div class="note">
   <aside class="aside">
-    	<p class="aside-title uppercase">Experiment</p>
-    	<p class="para">Try removing the default case. What error do you get?
+    	<p class="aside-title uppercase">Prova!</p>
+    	<p class="para">Provare a rimuovere il caso di default. Quale errore si riceve?
     	</p>
     
   </aside>
-</div><p class="para">Notice how <code class="code-voice">let</code> can be used in a pattern to assign the value that matched that part of a pattern to a constant.</p><p class="para">After executing the code inside the switch case that matched, the program exits from the switch statement. Execution doesn’t continue to the next case, so there is no need to explicitly break out of the switch at the end of each case’s code.</p><p class="para">You use <code class="code-voice">for</code>-<code class="code-voice">in</code> to iterate over items in a dictionary by providing a pair of names to use for each key-value pair. Dictionaries are an unordered collection, so their keys and values are iterated over in an arbitrary order.</p><section class="code-listing">
+</div><p class="para">Si noti come <code class="code-voice">let</code> possa essere utilizzato in un pattern per assegnare il valore che corrisponde a quella parte di pattern o a una costante.<!-- can be used in a pattern to assign the value that matched that part of a pattern to a constant.--></p><p class="para">Dopo l'esecuzione del codice all'interno del caso trovato nello switch, il programma esce dall'istruzione switch. L'esecuzione non continua nel caso successivo, perciò non c'è bisogno di interrompere espressamente lo switch alla fine di ogni blocco di codice dei singoli casi.</p><p class="para">Si utilizzi <code class="code-voice">for</code>-<code class="code-voice">in</code> per iterare elementi di un dizionario fornendo una coppia di nomi da utilizzare per ogni coppia chiave-valore. I dizionari sono collezioni non ordinate, quindi le loro chiavi e i loro valori vengono iterati in ordine arbitrario.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -250,12 +253,12 @@
   </div>
 </section><div class="note">
   <aside class="aside">
-    	<p class="aside-title uppercase">Experiment</p>
-    	<p class="para">Add another variable to keep track of which kind of number was the largest, as well as what that largest number was.
+    	<p class="aside-title uppercase">Prova!</p>
+    	<p class="para">Aggiungi un'altra variabile per tenere traccia di quale tipo di numero e quale numero era il più grande.<!-- Add another variable to keep track of which kind of number was the largest, as well as what that largest number was.-->
     	</p>
     
   </aside>
-</div><p class="para">Use <code class="code-voice">while</code> to repeat a block of code until a condition changes. The condition of a loop can be at the end instead, ensuring that the loop is run at least once.</p><section class="code-listing">
+</div><p class="para">Usare <code class="code-voice">while</code> per ripetere un blocco di codice fino a quando la condizione cambia. La condizione di un ciclo può altrimenti essere specificata alla fine, assicurando così che il ciclo venga eseguito almeno una volta.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -274,7 +277,7 @@
         </ol>
       </div>
   </div>
-</section><p class="para">You can keep an index in a loop—either by using <code class="code-voice">..&lt;</code> to make a range of indexes or by writing an explicit initialization, condition, and increment. These two loops do the same thing:</p><section class="code-listing">
+</section><p class="para">È possibile mantenere un indice all'interno di un ciclo mediante l'utilizzo di <code class="code-voice">..&lt;</code> per creare un intervallo di indici, oppure scrivendo esplicitamente un'inizializzazione, condizione e incremento. Questi due cicli fanno la stessa cosa:<!-- to make a range of indexes or by writing an explicit initialization, condition, and increment. These two loops do the same thing:--></p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -293,13 +296,13 @@
         </ol>
       </div>
   </div>
-</section><p class="para">Use <code class="code-voice">..&lt;</code> to make a range that omits its upper value, and use <code class="code-voice">...</code> to make a range that includes both values.</p>
+</section><p class="para">Utilizzare <code class="code-voice">..&lt;</code> per creare un intervallo che ometta il suo valore superiore, ed usare <code class="code-voice">...</code> per creare un intervallo che includa entrambi i valori.</p>
   
 </section>
 <section class="section">
 	<a id="TP40016643-CH2-ID463">&#x200c;</a>
-  <h3 class="section-name">Functions and Closures</h3>
-  <p class="para">Use <code class="code-voice">func</code> to declare a function. Call a function by following its name with a list of arguments in parentheses. Use <code class="code-voice">-&gt;</code> to separate the parameter names and types from the function’s return type.</p><section class="code-listing">
+  <h3 class="section-name">Funzioni e chiusure</h3>
+  <p class="para">Utilizzare <code class="code-voice">func</code> per dichiarare una funzione. Chiamare una funzione specificando il suo nome assieme ad una lista di argomenti tra parentesi. Utilizzare <code class="code-voice">-&gt;</code> per separare i tipi e i nomi dei parametri dal tipo di ritorno della funzione.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -313,12 +316,12 @@
   </div>
 </section><div class="note">
   <aside class="aside">
-    	<p class="aside-title uppercase">Experiment</p>
-    	<p class="para">Remove the <code class="code-voice">day</code> parameter. Add a parameter to include today’s lunch special in the greeting.
+    	<p class="aside-title uppercase">Prova!</p>
+    	<p class="para">Rimuovi il parametro <code class="code-voice">day</code>. Aggiungi un parametro per includere un annuncio del pranzo speciale di oggi nel saluto.
     	</p>
     
   </aside>
-</div><p class="para">Use a tuple to make a compound value—for example, to return multiple values from a function. The elements of a tuple can be referred to either by name or by number.</p><section class="code-listing">
+</div><p class="para">Utilizzare una tupla per creare un valore composto—ad esempio, per ritornare più valori da una funzione. Gli elementi di una tupla possono essere richiamati specificando il nome o il numero.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -345,7 +348,7 @@
         </ol>
       </div>
   </div>
-</section><p class="para">Functions can also take a variable number of arguments, collecting them into an array.</p><section class="code-listing">
+</section><p class="para">Le funzioni possono anche ricevere un numero variabile di argomenti ed inserirli all'interno di un array.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -364,12 +367,12 @@
   </div>
 </section><div class="note">
   <aside class="aside">
-    	<p class="aside-title uppercase">Experiment</p>
-    	<p class="para">Write a function that calculates the average of its arguments.
+    	<p class="aside-title uppercase">Prova!</p>
+    	<p class="para">Scrivere una funzione che calcoli la media dei suoi argomenti.
     	</p>
     
   </aside>
-</div><p class="para">Functions can be nested. Nested functions have access to variables that were declared in the outer function. You can use nested functions to organize the code in a function that is long or complex.</p><section class="code-listing">
+</div><p class="para">Le funzioni possono essere innestate. Le funzioni innestate hanno accesso a variabili dichiarate nella funzione di origine. È possibile utilizzare funzioni innestate per organizzare il codice in una funzione lunga o complessa.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -386,7 +389,7 @@
         </ol>
       </div>
   </div>
-</section><p class="para">Functions are a first-class type. This means that a function can return another function as its value.</p><section class="code-listing">
+</section><p class="para">Le funzioni sono un tipo di prima classe. Ciò significa che una funzione può restituire un'altra funzione come suo valore.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -402,7 +405,7 @@
         </ol>
       </div>
   </div>
-</section><p class="para">A function can take another function as one of its arguments.</p><section class="code-listing">
+</section><p class="para">Una funzione può ricevere un'altra funzione come uno dei suoi argomenti.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -423,7 +426,8 @@
         </ol>
       </div>
   </div>
-</section><p class="para">Functions are actually a special case of closures: blocks of code that can be called later. The code in a closure has access to things like variables and functions that were available in the scope where the closure was created, even if the closure is in a different scope when it is executed—you saw an example of this already with nested functions. You can write a closure without a name by surrounding code with braces (<code class="code-voice">{}</code>). Use <code class="code-voice">in</code> to separate the arguments and return type from the body.</p><section class="code-listing">
+</section><p class="para">Le funzioni sono in realtà un caso particolare di chiusure: blocchi di codice che possono essere chiamati in un secondo momento. Il codice in una chiusura ha accesso ad elementi come variabili o funzioni disponibili nell'ambito dove la chiusura è stata creata, anche se la chiusura si trova in un ambito diverso durante l'esecuzione-si è già visto un esempio simile nelle funzioni innestante. È possibile scrivere una chiusura senza un nome rinchiudendo il codice in parentesi graffe
+(<code class="code-voice">{}</code>). Utilizzare <code class="code-voice">in</code> per separare gli argomenti e il tipo di ritorno dal corpo della chiusura.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -438,12 +442,12 @@
   </div>
 </section><div class="note">
   <aside class="aside">
-    	<p class="aside-title uppercase">Experiment</p>
-    	<p class="para">Rewrite the closure to return zero for all odd numbers.
+    	<p class="aside-title uppercase">Prova!</p>
+    	<p class="para">Riscrivere la chiusura ritornando zero per tutti i numeri dispari.
     	</p>
     
   </aside>
-</div><p class="para">You have several options for writing closures more concisely. When a closure’s type is already known, such as the callback for a delegate, you can omit the type of its parameters, its return type, or both. Single statement closures implicitly return the value of their only statement.</p><section class="code-listing">
+</div><p class="para">Sono disponibili diverse opzioni per la scrittura di chiusure in modo più conciso. Quando il tipo di chiusura è già noto, come la risposta di un delegato, è possibile omettere il tipo dei suoi parametri, il suo tipo di ritorno, o entrambi. Le chiusure a singola istruzione restituiscono implicitamente il valore della loro unica istruzione.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -453,7 +457,7 @@
         </ol>
       </div>
   </div>
-</section><p class="para">You can refer to parameters by number instead of by name—this approach is especially useful in very short closures. A closure passed as the last argument to a function can appear immediately after the parentheses. When a closure is the only argument to a function, you can omit the parentheses entirely.</p><section class="code-listing">
+</section><p class="para">È possibile fare riferimento ai parametri per numero invece che in base al nome; tale approccio è particolarmente utile in chiusure più corte. Una chiusura passata come ultimo argomento di una funzione può comparire subito dopo le parentesi. Quando una chiusura è l'unico argomento di una funzione, è possibile omettere del tutto le parentesi.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -468,9 +472,8 @@
 </section>
 <section class="section">
 	<a id="TP40016643-CH2-ID464">&#x200c;</a>
-  <h3 class="section-name">Objects and Classes</h3>
-  <p class="para">Use <code class="code-voice">class</code> followed by the class’s name to create a class. A property declaration in a class is written the same way as a constant or variable declaration, except that it is in the context of a class. Likewise, method and function declarations are written the same way.</p><section class="code-listing">
-  
+  <h3 class="section-name">Oggetti e classi</h3>
+  <p class="para">Per creare una classe, scrivere <code class="code-voice">class</code>, seguito dal nome della classe. La dichiarazione di una proprietà in una classe è scritta nello stesso modo di una dichiarazione di una costante o di una variabile, tranne per il fatto che essa è dichiarata nel contesto di una classe. Allo stesso modo, le dichiarazioni di funzioni e metodi sono scritte nella stessa maniera.</p><section class="code-listing">
   <div class="code-sample">
       <div class="Swift">
         <ol class="code-lines">
@@ -485,12 +488,12 @@
   </div>
 </section><div class="note">
   <aside class="aside">
-    	<p class="aside-title uppercase">Experiment</p>
-    	<p class="para">Add a constant property with <code class="code-voice">let</code>, and add another method that takes an argument.
+    	<p class="aside-title uppercase">Prova!</p>
+    	<p class="para">Si aggiunga una proprietà costante tramite la parola chiave <code class="code-voice">let</code>, e si aggiunga un altro metodo che riceva alcuni argomenti.
     	</p>
     
   </aside>
-</div><p class="para">Create an instance of a class by putting parentheses after the class name. Use dot syntax to access the properties and methods of the instance.</p><section class="code-listing">
+</div><p class="para">Per creare un'istanza di una classe, inserire le parentesi dopo il nome della classe. Per accedere alle proprietà e ai metodi dell'istanza aggiungere il punto (.) seguito dal nome della proprietà o del metodo.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -501,7 +504,7 @@
         </ol>
       </div>
   </div>
-</section><p class="para">This version of the <code class="code-voice">Shape</code> class is missing something important: an initializer to set up the class when an instance is created. Use <code class="code-voice">init</code> to create one.</p><section class="code-listing">
+</section><p class="para">A questa versione della classe <code class="code-voice">Shape</code> manca qualcosa di importante: un'inizializzatore per impostare la classe quando viene creata un'istanza. Utilizzare <code class="code-voice">init</code> per crearne una.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -521,7 +524,7 @@
         </ol>
       </div>
   </div>
-</section><p class="para">Notice how <code class="code-voice">self</code> is used to distinguish the <code class="code-voice">name</code> property from the <code class="code-voice">name</code> argument to the initializer. The arguments to the initializer are passed like a function call when you create an instance of the class. Every property needs a value assigned—either in its declaration (as with <code class="code-voice">numberOfSides</code>) or in the initializer (as with <code class="code-voice">name</code>).</p><p class="para">Use <code class="code-voice">deinit</code> to create a deinitializer if you need to perform some cleanup before the object is deallocated.</p><p class="para">Subclasses include their superclass name after their class name, separated by a colon. There is no requirement for classes to subclass any standard root class, so you can include or omit a superclass as needed.</p><p class="para">Methods on a subclass that override the superclass’s implementation are marked with <code class="code-voice">override</code>—overriding a method by accident, without <code class="code-voice">override</code>, is detected by the compiler as an error. The compiler also detects methods with <code class="code-voice">override</code> that don’t actually override any method in the superclass.</p><section class="code-listing">
+</section><p class="para">Notare come <code class="code-voice">self</code> venga usato per distinguere la proprietà <code class="code-voice">name</code> dall'argomento dell'inizializzatore nominato anch'esso <code class="code-voice">name</code>. Gli argomenti dell'inizializzatore sono passati come una chiamata ad una funzione quando si crea un'istanza della classe. Ogni proprietà ha bisogno di un valore assegnato-sia esso nella sua dichiarazione (come con <code class="code-voice">numberOfSides</code>) o nell'inizializzatore (come con <code class="code-voice">name</code>).</p><p class="para">Utilizzare <code class="code-voice">deinit</code> per creare un deinizializzatore nel caso si abbia bisogno di eseguire delle operazioni di pulizia prima che l'oggetto venga deallocato. </p><p class="para">Le sottoclassi includono il nome della propria superclasse dopo il nome della propria classe, separata da due punti. Non vi è alcun obbligo per le classi di sottoclassare qualsiasi classe radice standard; in tal modo è possibile includere o omettere una superclasse se necessario. </p><p class="para">I metodi in una sottoclasse che sovrascrivono le implementazioni della superclasse sono connotati dalla parola chiave <code class="code-voice">override</code>. Sovrascrivendo un metodo per sbaglio, senza l'utilizzo della parola chiave <code class="code-voice">override</code>, il compilatore rileva un errore. Il compilatore riconosce anche i metodi contraddistinti da <code class="code-voice">override</code> che al momento non sovrascrivono alcun metodo della superclasse.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -551,12 +554,12 @@
   </div>
 </section><div class="note">
   <aside class="aside">
-    	<p class="aside-title uppercase">Experiment</p>
-    	<p class="para">Make another subclass of <code class="code-voice">NamedShape</code> called <code class="code-voice">Circle</code> that takes a radius and a name as arguments to its initializer. Implement an <code class="code-voice">area()</code> and a <code class="code-voice">simpleDescription()</code> method on the <code class="code-voice">Circle</code> class.
+    	<p class="aside-title uppercase">Prova!</p>
+    	<p class="para">Creare un'altra sottoclasse di <code class="code-voice">NamedShape</code> chiamata <code class="code-voice">Circle</code> che riceve il raggio e il nome come argomenti del suo inizializzatore. Implementare i metodi <code class="code-voice">area()</code> e <code class="code-voice">simpleDescription()</code> nella classe <code class="code-voice">Circle</code>.
     	</p>
     
   </aside>
-</div><p class="para">In addition to simple properties that are stored, properties can have a getter and a setter.</p><section class="code-listing">
+</div><p class="para">In aggiunta alle proprietà semplici che vengono memorizzate, le proprietà possono avere dei metodi <i>getter</i> e <i>setter</i>.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -590,9 +593,9 @@
         </ol>
       </div>
   </div>
-</section><p class="para">In the setter for <code class="code-voice">perimeter</code>, the new value has the implicit name <code class="code-voice">newValue</code>. You can provide an explicit name in parentheses after <code class="code-voice">set</code>.</p><p class="para">Notice that the initializer for the <code class="code-voice">EquilateralTriangle</code> class has three different steps:</p><ol class="list-number">
-  <li class="item"><p class="para">Setting the value of properties that the subclass declares.</p></li><li class="item"><p class="para">Calling the superclass’s initializer.</p></li><li class="item"><p class="para">Changing the value of properties defined by the superclass. Any additional setup work that uses methods, getters, or setters can also be done at this point.</p></li>
-</ol><p class="para">If you don’t need to compute the property but still need to provide code that is run before and after setting a new value, use <code class="code-voice">willSet</code> and <code class="code-voice">didSet</code>. The code you provide is run any time the value changes outside of an initializer. For example, the class below ensures that the side length of its triangle is always the same as the side length of its square.</p><section class="code-listing">
+</section><p class="para">Nel metodo setter di <code class="code-voice">perimeter</code>, il nuovo valore ha il nome implicito <code class="code-voice">newValue</code>. È possibile fornire un nome esplicito nelle parentesi dopo <code class="code-voice">set</code>.</p><p class="para">Notare che l'inizializzatore per la classe <code class="code-voice">EquilateralTriangle</code> svolge tre diverse fasi:</p><ol class="list-number">
+  <li class="item"><p class="para">Impostazione del valore delle proprietà dichiarate dalle sottoclassi.</p></li><li class="item"><p class="para">Chiamata all'inizializzatore della superclasse.</p></li><li class="item"><p class="para">Cambio del valore della proprietà definita dalla superclasse. Qualsiasi altra impostazione aggiuntiva che utilizza metodi, getter o setter può essere svolta a questo punto.</p></li>
+</ol><p class="para">Se non è necessario elaborare la proprietà, ma è comunque necessario fornire del codice che viene eseguito prima e dopo dell'impostazione del nuovo valore, utilizzare i metodi <code class="code-voice">willSet</code> e <code class="code-voice">didSet</code>. Il codice che viene fornito viene eseguito ogni volta che il valore cambia all'infuori di un inizializzatore. Per esempio, la seguente classe assicura che la lunghezza del lato del triangolo è sempre uguale alla lunghezza del lato del suo quadrato.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -621,7 +624,7 @@
         </ol>
       </div>
   </div>
-</section><p class="para">When working with optional values, you can write <code class="code-voice">?</code> before operations like methods, properties, and subscripting. If the value before the <code class="code-voice">?</code> is <code class="code-voice">nil</code>, everything after the <code class="code-voice">?</code> is ignored and the value of the whole expression is <code class="code-voice">nil</code>. Otherwise, the optional value is unwrapped, and everything after the <code class="code-voice">?</code> acts on the unwrapped value. In both cases, the value of the whole expression is an optional value.</p><section class="code-listing">
+</section><p class="para">Quando si lavora con valori opzionali, è possibile scrivere <code class="code-voice">?</code> prima di operazioni come metodi, proprietà e sottoscrizioni.<!-- subscripting -->. Se il valore prima di <code class="code-voice">?</code> è <code class="code-voice">nil</code>, tutto ciò che è presente dopo <code class="code-voice">?</code> è ignorato e il valore dell'intera espressione è <code class="code-voice">nil</code>. In caso contrario, il valore opzionale è scartato e tutto ciò che è presente dopo il <code class="code-voice">?</code> agisce sul valore scartato. In entrambi i casi, il valore dell'intera espressione è un valore opzionale.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -636,8 +639,8 @@
 </section>
 <section class="section">
 	<a id="TP40016643-CH2-ID465">&#x200c;</a>
-  <h3 class="section-name">Enumerations and Structures</h3>
-  <p class="para">Use <code class="code-voice">enum</code> to create an enumeration. Like classes and all other named types, enumerations can have methods associated with them.</p><section class="code-listing">
+  <h3 class="section-name">Enumerazioni e strutture</h3>
+  <p class="para">Utilizzare <code class="code-voice">enum</code> per creare un'enumerazione. Come le classi e tutti gli altri tipi nominali, gli enumeratori possono avere metodi associati ad essi.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -668,12 +671,12 @@
   </div>
 </section><div class="note">
   <aside class="aside">
-    	<p class="aside-title uppercase">Experiment</p>
-    	<p class="para">Write a function that compares two <code class="code-voice">Rank</code> values by comparing their raw values.
+    	<p class="aside-title uppercase">Prova!</p>
+    	<p class="para">Scrivere una funzione che confronta due valori <code class="code-voice">Rank</code> confrontando i loro valori puri.
     	</p>
     
   </aside>
-</div><p class="para">In the example above, the raw-value type of the enumeration is <code class="code-voice">Int</code>, so you only have to specify the first raw value. The rest of the raw values are assigned in order. You can also use strings or floating-point numbers as the raw type of an enumeration. Use the <code class="code-voice">rawValue</code> property to access the raw value of an enumeration case.</p><p class="para">Use the <code class="code-voice">init?(rawValue:)</code> initializer to make an instance of an enumeration from a raw value.</p><section class="code-listing">
+</div><p class="para">Nell'esempio precedente, il tipo di valore puro dell'enumeratore è <code class="code-voice">Int</code>, quindi è necessario specificare solamente il primo valore puro. Il resto dei valori puri vengono assegnati in ordine. È anche possibile utilizzare stringhe o numeri in virgola mobile come tipi puri di un'enumerazione. Utilizzare la proprietà <code class="code-voice">rawValue</code> per accedere al valore puro di un caso di enumerazione. </p><p class="para">Utilizzare l'inizializzatore <code class="code-voice">init?(rawValue:)</code> per creare un'istanza di un'enumerazione partendo da un valore puro.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -684,7 +687,7 @@
         </ol>
       </div>
   </div>
-</section><p class="para">The case values of an enumeration are actual values, not just another way of writing their raw values. In fact, in cases where there isn’t a meaningful raw value, you don’t have to provide one.</p><section class="code-listing">
+</section><p class="para">I valori dei casi di un'enumerazione non sono solo un'altro modo di scrivere i valori puri ma sono valori veri e propri. Infatti, nei casi in cui non esista un valore puro significativo, non c'è bisogno di fornirne uno.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -711,12 +714,12 @@
   </div>
 </section><div class="note">
   <aside class="aside">
-    	<p class="aside-title uppercase">Experiment</p>
-    	<p class="para">Add a <code class="code-voice">color()</code> method to <code class="code-voice">Suit</code> that returns “black” for spades and clubs, and returns “red” for hearts and diamonds.
+    	<p class="aside-title uppercase">Prova!</p>
+    	<p class="para">Aggiungere un metodo <code class="code-voice">color()</code> all'enumeratore <code class="code-voice">Suit</code> che ritorni "black" per picche e fiori oppure "red" per cuori e quadri.
     	</p>
     
   </aside>
-</div><p class="para">Notice the two ways that the <code class="code-voice">Hearts</code> case of the enumeration is referred to above: When assigning a value to the <code class="code-voice">hearts</code> constant, the enumeration case <code class="code-voice">Suit.Hearts</code> is referred to by its full name because the constant doesn’t have an explicit type specified. Inside the switch, the enumeration case is referred to by the abbreviated form <code class="code-voice">.Hearts</code> because the value of <code class="code-voice">self</code> is already known to be a suit. You can use the abbreviated form anytime the value’s type is already known.</p><p class="para">Use <code class="code-voice">struct</code> to create a structure. Structures support many of the same behaviors as classes, including methods and initializers. One of the most important differences between structures and classes is that structures are always copied when they are passed around in your code, but classes are passed by reference.</p><section class="code-listing">
+</div><p class="para">Notare i due modi in cui si fa riferimento al caso di enumerazione <code class="code-voice">Hearts</code>: assegnando un valore alla costante <code class="code-voice">hearts</code>, il caso di enumerazione <code class="code-voice">Suit.Hearts</code> è referenziato tramite il suo nome completo poichè la costante non ha un tipo esplicito specificato. All'interno dello switch, il caso di enumerazione è referenziato dalla forma abbreviata <code class="code-voice">.Hearts</code> poichè il valore di <code class="code-voice">self</code> è già noto essere un tipo di seme. È possibile utilizzare la forma abbreviata ogni volta che il tipo del valore è già conosciuto. </p><p class="para">Utilizzare <code class="code-voice">struct</code> per creare una struttura. Le strutture supportano molti dei comportamenti forniti dalle classi, inclusi i metodi e gli inizializzatori. Una delle differenze più importanti tra strutture e classi è che le strutture sono sempre copiate in memoria quando vengono passate nel codice (ad esempio all'interno di funzioni), mentre le classi sono passate per riferimento.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -735,12 +738,12 @@
   </div>
 </section><div class="note">
   <aside class="aside">
-    	<p class="aside-title uppercase">Experiment</p>
-    	<p class="para">Add a method to <code class="code-voice">Card</code> that creates a full deck of cards, with one card of each combination of rank and suit.
+    	<p class="aside-title uppercase">Prova!</p>
+    	<p class="para">Aggiungere un metodo a <code class="code-voice">Card</code> che crea un mazzo completo di carte, con una carta per ogni combinazione di punteggio e seme.
     	</p>
     
   </aside>
-</div><p class="para">An instance of an enumeration case can have values associated with the instance. Instances of the same enumeration case can have different values associated with them. You provide the associated values when you create the instance. Associated values and raw values are different: The raw value of an enumeration case is the same for all of its instances, and you provide the raw value when you define the enumeration.</p><p class="para">For example, consider the case of requesting the sunrise and sunset time from a server. The server either responds with the information or it responds with some error information.</p><section class="code-listing">
+</div><p class="para">Un'istanza di un caso di enumerazione può avere valori associati con l'istanza. Istanze dello stesso caso di enumerazione possono avere differenti valori associati ad esso. Si forniscano i valori associati quando l'istanza viene creata. I valori associati e i valori puri sono diversi: il valore puro di un caso di enumerazione è lo stesso per tutte le istanze, mentre il valore puro viene fornito quando si definisce l'enumerazione.</p><p class="para">Per esempio, si consideri il caso in cui si chieda l'orario di alba e tramonto da un server. Il server può rispondere con le informazioni o con un errore.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -764,18 +767,18 @@
   </div>
 </section><div class="note">
   <aside class="aside">
-    	<p class="aside-title uppercase">Experiment</p>
-    	<p class="para">Add a third case to <code class="code-voice">ServerResponse</code> and to the switch.
+    	<p class="aside-title uppercase">Prova!</p>
+    	<p class="para">Aggiungere un terzo caso a <code class="code-voice">ServerResponse</code> e allo switch.
     	</p>
     
   </aside>
-</div><p class="para">Notice how the sunrise and sunset times are extracted from the <code class="code-voice">ServerResponse</code> value as part of matching the value against the switch cases.</p>
+</div><p class="para">Notare come gli orari di alba e tramonto sono estratti dal valore <code class="code-voice">ServerResponse</code> come parte dell'associazione tra il valore e i casi dello switch.</p>
   
 </section>
 <section class="section">
 	<a id="TP40016643-CH2-ID466">&#x200c;</a>
-  <h3 class="section-name">Protocols and Extensions</h3>
-  <p class="para">Use <code class="code-voice">protocol</code> to declare a protocol.</p><section class="code-listing">
+  <h3 class="section-name">Protocolli ed estensioni</h3>
+  <p class="para">Utilizzare <code class="code-voice">protocol</code> per dichiarare un protocollo.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -787,7 +790,7 @@
         </ol>
       </div>
   </div>
-</section><p class="para">Classes, enumerations, and structs can all adopt protocols.</p><section class="code-listing">
+</section><p class="para">Classi, enumeratori e strutture supportano i protocolli.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -817,12 +820,12 @@
   </div>
 </section><div class="note">
   <aside class="aside">
-    	<p class="aside-title uppercase">Experiment</p>
-    	<p class="para">Write an enumeration that conforms to this protocol.
+    	<p class="aside-title uppercase">Prova!</p>
+    	<p class="para">Scrivere un'enumeratore che sia conforme a questo protocollo.
     	</p>
     
   </aside>
-</div><p class="para">Notice the use of the <code class="code-voice">mutating</code> keyword in the declaration of <code class="code-voice">SimpleStructure</code> to mark a method that modifies the structure. The declaration of <code class="code-voice">SimpleClass</code> doesn’t need any of its methods marked as mutating because methods on a class can always modify the class.</p><p class="para">Use <code class="code-voice">extension</code> to add functionality to an existing type, such as new methods and computed properties. You can use an extension to add protocol conformance to a type that is declared elsewhere, or even to a type that you imported from a library or framework.</p><section class="code-listing">
+</div><p class="para">Notare l'utilizzo della parole chiave <code class="code-voice">mutating</code> nella dichiarazione di <code class="code-voice">SimpleStructure</code> per contrassegnare un metodo che modifica la struttura. La dichiarazione di <code class="code-voice">SimpleClass</code> non ha bisogno di nessuno dei suoi metodi contrassegnati come mutating perchè i metodi in una classe possono sempre modificare la classe. </p><p class="para">Utilizzare <code class="code-voice">extension</code> per aggiungere funzionalità ad un tipo esistente, come nuovi metodi o proprietà calcolate. È possibile utilizzare un'estensione per rendere conforme un tipo ad un determinato protocollo dichiarato da qualche altra parte, oppure un tipo importato da una libreria o un framework.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -841,12 +844,12 @@
   </div>
 </section><div class="note">
   <aside class="aside">
-    	<p class="aside-title uppercase">Experiment</p>
-    	<p class="para">Write an extension for the <code class="code-voice">Double</code> type that adds an <code class="code-voice">absoluteValue</code> property.
+    	<p class="aside-title uppercase">Prova!</p>
+    	<p class="para">Scrivere un estensione per il tipo <code class="code-voice">Double</code> che aggiunga la proprietà <code class="code-voice">absoluteValue</code>.
     	</p>
     
   </aside>
-</div><p class="para">You can use a protocol name just like any other named type—for example, to create a collection of objects that have different types but that all conform to a single protocol. When you work with values whose type is a protocol type, methods outside the protocol definition are not available.</p><section class="code-listing">
+</div><p class="para">È possibile utilizzare il nome di un protocollo come un qualsiasi altro tipo nominale-per esempio, per creare una collezione di oggetti che possiede diversi tipi ma che sono tutti conformi ad un singolo protocollo. Quando si lavora con valori il cui tipo è un tipo protocollo, i metodi all'infuori della definizione del protocollo non sono disponibili.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -857,13 +860,13 @@
         </ol>
       </div>
   </div>
-</section><p class="para">Even though the variable <code class="code-voice">protocolValue</code> has a runtime type of <code class="code-voice">SimpleClass</code>, the compiler treats it as the given type of <code class="code-voice">ExampleProtocol</code>. This means that you can’t accidentally access methods or properties that the class implements in addition to its protocol conformance.</p>
+</section><p class="para">Anche se la variabile <code class="code-voice">protocolValue</code> in fase di esecuzione è di tipo <code class="code-voice">SimpleClass</code>, il compilatore li considera come tipo <code class="code-voice">ExampleProtocol</code>. Ciò significa che non è possibile accedere accidentalmente a metodi o proprietà che la classe implementa in aggiunta alla conformità al suo protocollo.</p>
   
 </section>
 <section class="section">
 	<a id="TP40016643-CH2-NoLink_19">&#x200c;</a>
-  <h3 class="section-name">Generics</h3>
-  <p class="para">Write a name inside angle brackets to make a generic function or type.</p><section class="code-listing">
+  <h3 class="section-name">Generici</h3>
+  <p class="para">Scrivere un nome all'interno di parentesi angolari per creare una funzione o un tipo generico.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -879,7 +882,7 @@
         </ol>
       </div>
   </div>
-</section><p class="para">You can make generic forms of functions and methods, as well as classes, enumerations, and structures.</p><section class="code-listing">
+</section><p class="para">È possibile creare funzioni, metodi, classi, enumeratori e strutture generiche.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -894,7 +897,7 @@
         </ol>
       </div>
   </div>
-</section><p class="para">Use <code class="code-voice">where</code> after the type name to specify a list of requirements—for example, to require the type to implement a protocol, to require two types to be the same, or to require a class to have a particular superclass.</p><section class="code-listing">
+</section><p class="para">Utilizzare <code class="code-voice">where</code> dopo il nome del tipo per specificare una lista di requisiti—per esempio, per richiedere il tipo per implementare un protocollo, o richiedere che due tipi siano uguali, o per richiedere che una classe abbia una particolare superclasse.</p><section class="code-listing">
   
   <div class="code-sample">
       <div class="Swift">
@@ -915,12 +918,12 @@
   </div>
 </section><div class="note">
   <aside class="aside">
-    	<p class="aside-title uppercase">Experiment</p>
-    	<p class="para">Modify the <code class="code-voice">anyCommonElements(_:_:)</code> function to make a function that returns an array of the elements that any two sequences have in common.
+    	<p class="aside-title uppercase">Prova!</p>
+    	<p class="para">Modificare la funzione <code class="code-voice">anyCommonElements(_:_:)</code> per creare una funzione che ritorni un array di elementi che le due sequenze hanno in comune.
     	</p>
     
   </aside>
-</div><p class="para">Writing <code class="code-voice">&lt;T: Equatable&gt;</code> is the same as writing <code class="code-voice">&lt;T where T: Equatable&gt;</code>.</p>
+</div><p class="para">Scrivere <code class="code-voice">&lt;T: Equatable&gt;</code> è come scrivere <code class="code-voice">&lt;T where T: Equatable&gt;</code>.</p>
   
 </section>
 

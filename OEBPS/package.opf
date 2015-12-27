@@ -4,7 +4,7 @@
     <dc:language>en</dc:language>
     <dc:identifier id="TP40016643">//apple_ref/doc/uid/</dc:identifier>
     <meta property="identifier-type" refines="#TP40016643">nil</meta>
-    <dc:title id="title1">The Swift Programming Language (Swift 2.2)</dc:title>
+    <dc:title id="title1">Il linguaggio di programmazione Swift (Swift 2.2)</dc:title>
     <meta property="title-type" refines="#title1">main</meta>
     <dc:creator id="creator1">Apple Inc.</dc:creator>
     <meta property="role" refines="#creator1">aut</meta>
